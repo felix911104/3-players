@@ -8,7 +8,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-  <title>Events</title>
+  <title>Travel To Go</title>
 
   <meta name="keywords" content="">
   <meta name="description" content="">
@@ -22,11 +22,13 @@
   <link href="https://fonts.googleapis.com/css?family=Droid+Serif:400,400i,700,700i" rel="stylesheet">
 
   <!-- Custom & Default Styles -->
+  
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="css/font-awesome.min.css">
-  <link rel="stylesheet" href="css/carousel.css">
-  <link rel="stylesheet" href="css/animate.css">
+  <!-- <link rel="stylesheet" href="css/carousel.css"> -->
+  <!-- <link rel="stylesheet" href="css/animate.css"> -->
   <link rel="stylesheet" href="style.css">
+  
 
 
 
@@ -41,25 +43,7 @@
   <!-- END LOADER -->
 
   <div id="wrapper">
-    <!-- BEGIN # MODAL LOGIN -->
-    <div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-hidden="true" style="display: none;">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <!-- Begin # DIV Form -->
-          <div id="div-forms">
-            <form id="login-form">
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span class="flaticon-add" aria-hidden="true"></span>
-              </button>
-              <div class="modal-body">
-                <input class="form-control" type="text" placeholder="What you are looking for?" required>
-              </div>
-            </form><!-- End # Login Form -->
-          </div><!-- End # DIV Form -->
-        </div>
-      </div>
-    </div>
-    <!-- END # MODAL LOGIN -->
+    
 
     <header class="header">
       <div class="topbar clearfix">
@@ -144,7 +128,7 @@
                 </ul>
               </li>
               <li><a href="event.html">Events</a></li>
-              <li><a href="page-contact.html">Contact</a></li>
+              <li><a href="">Contact</a></li>
               <li class="iconitem"><a href="#" data-toggle="modal" data-target="#login-modal"><i
                     class="fa fa-search"></i></a></li>
             </ul>
@@ -161,7 +145,7 @@
           <small>We provide assist for people who likes to travel together.</small>
           <div class="btn-wrapper">
             <div class="text-center">
-              <a href="#" class="btn btn-primary wow slideInLeft">Learn More</a> &nbsp;&nbsp;&nbsp;<a href="#"
+              <a href="#" class="btn btn-primary wow slideInLeft">Learn More</a> &nbsp;&nbsp;&nbsp;<a href="event.html"
                 class="btn btn-default wow slideInRight">Join Now</a>
             </div>
           </div><!-- end row -->
@@ -183,28 +167,33 @@
         <h3>Information</h3>
 
         <div class="form-group row">
-          <label for="1" class="col-sm-1 col-form-label">Departure</label>
-          <div class="col-sm-4">
+          <label for="1" class="col-sm-2 col-form-label">Departure</label>
+          <div class="col-sm-3">
             <input type="text" class="form-control" id="departure">
           </div>
-          <label for="1" class="col-sm-1 col-form-label">Destination</label>
-          <div class="col-sm-4">
+          <label for="1" class="col-sm-2 col-form-label">Destination</label>
+          <div class="col-sm-3">
             <input type="text" class="form-control" id="destination">
           </div>
         </div>
 
         <div class="form-group row">
-          <label for="example-date-input" class="col-sm-1 col-form-label">From</label>
-          <div class="col-sm-4">
+          <label for="example-date-input" class="col-sm-2 col-form-label">From</label>
+          <div class="col-sm-3">
             <input class="form-control" type="date" value="2019-08-19" id="example-date-input">
           </div>
-          <label for="example-date-input" class="col-sm-1 col-form-label">Cabin</label>
-          <div class="col-sm-4">
-            <input class="form-control" type="text" value="e" id="cabin">
+          <label for="2" class="col-sm-2 col-form-label">Cabin</label>
+          <div class="col-sm-3">
+            <select class="form-control" type="text" value="e" id="cabin">
+                <option>E/ Econony</option>
+                <option>B/ Business</option>
+                <option>P/ Premium Econony</option>
+                <option>F/ First Class</option>
+            </select>
           </div>
         </div>
 
-        <button id="Search-btn" type="submit" class="btn center-block">Submit</button>
+        <button id="Search-btn" type="submit" class="btn btn-primary center-block">Submit</button>
 
       </div>
     </section>
@@ -240,11 +229,10 @@
     <!-- jQuery Files -->
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
-    <script src="js/carousel.js"></script>
-    <script src="js/animate.js"></script>
+   
     <script src="js/custom.js"></script>
     <!-- VIDEO BG PLUGINS -->
-    <script src="js/videobg.js"></script>
+    
     <script src="js/flight.js"></script>
 
 

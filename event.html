@@ -8,7 +8,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-    <title>Travel To Go</title>
+    <title>Events</title>
 
     <meta name="keywords" content="">
     <meta name="description" content="">
@@ -24,8 +24,6 @@
     <!-- Custom & Default Styles -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/carousel.css">
-    <link rel="stylesheet" href="css/animate.css">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="assets/css/style.css">
 
@@ -44,26 +42,7 @@
     <!-- END LOADER -->
 
     <div id="wrapper">
-        <!-- BEGIN # MODAL LOGIN -->
-        <div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-hidden="true" style="display: none;">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <!-- Begin # DIV Form -->
-                    <div id="div-forms">
-                        <form id="login-form">
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span class="flaticon-add" aria-hidden="true"></span>
-                            </button>
-                            <div class="modal-body">
-                                <input class="form-control" type="text" placeholder="What you are looking for?"
-                                    required>
-                            </div>
-                        </form><!-- End # Login Form -->
-                    </div><!-- End # DIV Form -->
-                </div>
-            </div>
-        </div>
-        <!-- END # MODAL LOGIN -->
+        
 
         <header class="header">
             <div class="topbar clearfix">
@@ -140,7 +119,7 @@
                     <h3>Find Your Traveling Friends</h3>
                     <p>Search the place that you are going to, see whoelse will be there. Let's make travel more fun!</p>
                 </div><!-- end title -->
-                <span class="badge badge-pill badge-secondary center-block" id="eventD">Los Angeles</span>
+                <span class="badge badge-pill badge-secondary center-block" id="eventD" style="font-size:30px">Los Angeles</span>
                
 
                 
@@ -149,11 +128,22 @@
         </section>
 
         <!-- search city -->
-        <div>
+       
+            <!-- <div>
                 <label for="searchCity">City</label>
-                <input type="text" id="searchCity">
-                <button id="go">Go</button>
-            </div>
+                <input type="text" class="form-control" id="searchCity">
+                <button id="go" class="btn btn-primary center-block" >Go</button>
+            </div> -->
+            <div class="container center-block">
+            <form class="form-inline" role="search">
+                    <div class="form-1">
+                        <input type="text" class="form-control" id="searchCity" placeholder="Enter city here..">
+                        <button type="submit" class="btn btn-primary" id="go"><i
+                            class="fa fa-search"></i></button>
+                    </div>
+                </form>
+           
+        
         
             <form id="leaveMessage">
                 <div class="form-group">
@@ -177,7 +167,7 @@
                 </div>
                 <button type="submit" id="submitForm">Submit</button>
               </form>
-
+ </div>
 
         <div class="copyrights">
             <div class="container">
@@ -194,11 +184,10 @@
         <!-- jQuery Files -->
         <script src="js/jquery.min.js"></script>
         <script src="js/bootstrap.min.js"></script>
-        <script src="js/carousel.js"></script>
-        <script src="js/animate.js"></script>
+       
         <script src="js/custom.js"></script>
         <!-- VIDEO BG PLUGINS -->
-        <script src="js/videobg.js"></script>
+        
 
         <!-- Our JS-->
         <script src="https://code.jquery.com/jquery-3.4.1.js"
