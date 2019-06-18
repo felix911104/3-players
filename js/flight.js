@@ -52,15 +52,19 @@ function search(){
 
         // var newTable=$('<table class="table table-bordered">');
         // var newThead=$("<thead>");
+
         var newTbody=$("#flightInfo");
         
-        // var newTr=$("<tr>");
-        // newTr.append(
-        //     $('<th scope="col">').text("Flight Number"),
-        //     $('<th scope="col">').text("Departure Time"),
-        //     $('<th scope="col">').text("Arrival Time"),
-        //     $('<th scope="col">').text("Price"),
-        //     )
+        var newTr=$("<tr>");
+        newTr.append(
+            $('<th scope="col">').text("Flight Number"),
+            $('<th scope="col">').text("Departure"),
+            $('<th scope="col">').text("Arrival"),
+            $('<th scope="col">').text("Ticket Price"),
+            );
+            $("#flight-thead").empty();
+            $("#flight-thead").append(newTr);
+            newTbody.empty();
             for(var i=0;i<5;i++){
                 var newTbodyTr=$("<tr>").append(
                     $("<td>").text(flightInfo[i].flightNumber),
@@ -70,11 +74,14 @@ function search(){
                     );
                     newTbody.append(newTbodyTr);
                 }
-            $("#atp").text(avePrice);
+            // $("#apt1").text("Average Ticket Price: $");
+            $("#atp").empty();
+            $("#atp").text("Average Ticket Price: $"+avePrice);
         // newThead.append(newTr);
         // newTable.append(newThead,newTbody);
         // $("#flight-display").append(newTable);
-        // $("#flight-display").append($("<p>").text("Average Price: " +avePrice));
+        
+       
 
 
 
