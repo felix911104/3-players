@@ -29,7 +29,6 @@ $("#go").on("click", function(event) {
             $("<h1>").attr("id", "notice").text("Message Not Found, start leave your message please").appendTo($("#mainContainer"));
         }
         displayMessage();
-
     });
 });
 $("#submitForm").on("click", function(event) {
@@ -46,6 +45,7 @@ $("#submitForm").on("click", function(event) {
         gender: userGender,
         message: userMessage
     });
+    $("#leaveMessage").css("visibility", "hidden");
 });
 function displayMessage() {
     var numOfMessage;
