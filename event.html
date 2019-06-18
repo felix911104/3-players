@@ -27,8 +27,11 @@
     <link rel="stylesheet" href="css/carousel.css">
     <link rel="stylesheet" href="css/animate.css">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="assets/css/style.css">
 
-
+    <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-database.js"></script>
 
 </head>
 
@@ -130,77 +133,51 @@
             </div><!-- end container -->
         </header>
 
+                
         <section class="section mt">
-            <div class="container">
+            <div class="container" id="mainContainer">
                 <div class="section-title text-center">
                     <h3>Find Your Traveling Friends</h3>
                     <p>Search the place that you are going to, see whoelse will be there. Let's make travel more fun!</p>
                 </div><!-- end title -->
                 <span class="badge badge-pill badge-secondary center-block" id="eventD">Los Angeles</span>
                
-                <div class="row">
-                    <div class="col-md-4">
-                        <div class="box testimonial">
-                            <p class="testiname"><strong>
-                                    Jenny LUXURY</strong></p>
-                            <p>Quisque porttitor eros quis leo pulvinar, at hendrerit sapien iaculis. Donec consectetur
-                                accumsan arcu, sit amet fringilla ex ultricies.</p>
-                        </div><!-- end testimonial -->
-                    </div><!-- end col -->
 
-                    <div class="col-md-4">
-                        <div class="box testimonial">
-                            <p class="testiname"><strong>
-                                    Martin LEO</strong></p>
-                            <p>Quisque porttitor eros quis leo pulvinar, at hendrerit sapien iaculis. Donec consectetur
-                                accumsan arcu, sit amet fringilla ex ultricies.</p>
-                            
-                        </div><!-- end testimonial -->
-                    </div><!-- end col -->
-
-                    <div class="col-md-4">
-                        <div class="box testimonial">
-                            <p class="testiname"><strong>
-                                    John DOE</strong></p>
-                            <p>Quisque porttitor eros quis leo pulvinar, at hendrerit sapien iaculis. Donec consectetur
-                                accumsan arcu, sit amet fringilla ex ultricies.</p>
-                            
-                        </div><!-- end testimonial -->
-                    </div><!-- end col -->
-                </div>
-                <br>
-                <div class="row">
-                    <div class="col-md-4">
-                        <div class="box testimonial">
-                            <p class="testiname"><strong>
-                                    Jenny LUXURY</strong></p>
-                            <p>Quisque porttitor eros quis leo pulvinar, at hendrerit sapien iaculis. Donec consectetur
-                                accumsan arcu, sit amet fringilla ex ultricies.</p>
-                        </div><!-- end testimonial -->
-                    </div><!-- end col -->
-
-                    <div class="col-md-4">
-                        <div class="box testimonial">
-                            <p class="testiname"><strong>
-                                    Martin LEO</strong></p>
-                            <p>Quisque porttitor eros quis leo pulvinar, at hendrerit sapien iaculis. Donec consectetur
-                                accumsan arcu, sit amet fringilla ex ultricies.</p>
-                            
-                        </div><!-- end testimonial -->
-                    </div><!-- end col -->
-
-                    <div class="col-md-4">
-                        <div class="box testimonial">
-                            <p class="testiname"><strong>
-                                    John DOE</strong></p>
-                            <p>Quisque porttitor eros quis leo pulvinar, at hendrerit sapien iaculis. Donec consectetur
-                                accumsan arcu, sit amet fringilla ex ultricies.</p>
-                            
-                        </div><!-- end testimonial -->
-                    </div><!-- end col -->
-                </div><!-- end row -->
+                
+                
             </div><!-- end container -->
         </section>
+
+        <!-- search city -->
+        <div>
+                <label for="searchCity">City</label>
+                <input type="text" id="searchCity">
+                <button id="go">Go</button>
+            </div>
+        
+            <form id="leaveMessage">
+                <div class="form-group">
+                    <label for="exampleFormControlInput1">Name</label>
+                    <input type="text" class="form-control" id="userName">
+                </div>
+                <div class="form-group">
+                  <label for="exampleFormControlInput1">Email address</label>
+                  <input type="email" class="form-control" id="userEmail">
+                </div>
+                <div class="form-group">
+                  <label for="exampleFormControlSelect1">Gender</label>
+                  <select class="form-control" id="userGender">
+                    <option>Male</option>
+                    <option>Female</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="exampleFormControlTextarea1">Message</label>
+                  <textarea class="form-control" id="userMessage" rows="3"></textarea>
+                </div>
+                <button type="submit" id="submitForm">Submit</button>
+              </form>
+
 
         <div class="copyrights">
             <div class="container">
@@ -223,6 +200,14 @@
         <!-- VIDEO BG PLUGINS -->
         <script src="js/videobg.js"></script>
 
+        <!-- Our JS-->
+        <script src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+        crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <script src="assets/javascript/app.js"></script>
+        <script src="assets/javascript/event.js"></script>
 
 </body>
 
