@@ -2034,6 +2034,7 @@ BUTTONS
     color: #ffffff !important;
     padding: 13px 40px;
     text-transform: capitalize;
+    
 }
 
 .btn-transparent {
@@ -2082,6 +2083,10 @@ MICS
     border-radius: 50%
 }
 
+#eventD {
+    margin-bottom: 20px;
+    font-size: 20px;
+}
 
 /******************************************
 COLOR BLUE
