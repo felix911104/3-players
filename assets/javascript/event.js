@@ -42,6 +42,7 @@ function initMap() {
 
 $("#go").on("click", function(event) {
     event.preventDefault();
+    $("#mainContainer").empty();
     $("#leaveMessage").css("visibility", "visible");
     city = $("#searchCity").val().toUpperCase();
     displayMap();
@@ -49,7 +50,7 @@ $("#go").on("click", function(event) {
     curRef = database.ref("/user/" + city);
     curRef.once("value").then(function(snapshot) {
         if (!snapshot.exists()) {
-            $("<h1>").attr("id", "notice").text("Message Not Found, start leave your message please").appendTo($("#mainContainer"));
+            $("<h1>").attr("id", "notice").attr("class", "text-center").text("Message Not Found, start leave your message please").appendTo($("#mainContainer"));
         }
         displayMessage();
     });
