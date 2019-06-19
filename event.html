@@ -30,6 +30,8 @@
     <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
     <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-database.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAZbDrdQKOwou4F3mQjjFyD3umrHKV59vE" async defer>
+    </script>
 
 </head>
 
@@ -42,132 +44,137 @@
     <!-- END LOADER -->
 
     <div id="wrapper">
-        
+
 
         <header class="header">
             <div class="topbar clearfix">
-                
-            <div class="container">
-                <nav class="navbar navbar-default yamm">
-                    <div class="navbar-header">
-                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
-                            data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                            <span class="sr-only">Toggle navigation</span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                        </button>
-                        <div class="logo-normal">
-                            <a class="navbar-brand" href="index.html">
-                                <p><i class="fas fa-users"></i> Travel To Go</p>
-                            </a>
+
+                <div class="container">
+                    <nav class="navbar navbar-default yamm">
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                                data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                            <div class="logo-normal">
+                                <a class="navbar-brand" href="index.html">
+                                    <p><i class="fas fa-users"></i> Travel To Go</p>
+                                </a>
+                            </div>
                         </div>
-                    </div>
 
-                    <div id="navbar" class="navbar-collapse collapse">
-                        <ul class="nav navbar-nav navbar-right">
-                            <li><a href="index.html">Home</a></li>
-                            <li class="dropdown yamm-fw yamm-half"><a href="#" data-toggle="dropdown"
-                                    class="dropdown-toggle active">Popular Locations<b class="fa fa-angle-down"></b></a>
-                                <ul class="dropdown-menu">
-                                    <li>
-                                        <div class="yamm-content clearfix">
-                                            <div class="row-fluid">
-                                                <div class="col-md-6 col-sm-6">
-                                                    <h4>Popular Locations</h4>
-                                                    <ul>
-                                                        <li><a href="#">North America</a></li>
-                                                        <li><a href="#">South America</a></li>
-                                                        <li><a href="#">Asia</a></li>
-                                                        <li><a href="#">Eroup</a></li>
+                        <div id="navbar" class="navbar-collapse collapse">
+                            <ul class="nav navbar-nav navbar-right">
+                                <li><a href="index.html">Home</a></li>
+                                <li class="dropdown yamm-fw yamm-half"><a href="#" data-toggle="dropdown"
+                                        class="dropdown-toggle active">Popular Locations<b
+                                            class="fa fa-angle-down"></b></a>
+                                    <ul class="dropdown-menu">
+                                        <li>
+                                            <div class="yamm-content clearfix">
+                                                <div class="row-fluid">
+                                                    <div class="col-md-6 col-sm-6">
+                                                        <h4>Popular Locations</h4>
+                                                        <ul>
+                                                            <li><a href="#">North America</a></li>
+                                                            <li><a href="#">South America</a></li>
+                                                            <li><a href="#">Asia</a></li>
+                                                            <li><a href="#">Eroup</a></li>
 
-                                                    </ul>
-                                                </div>
-                                                <div class="col-md-6 col-sm-6">
-                                                    <div class="menu-widget text-center">
-                                                        <div class="image-wrap">
-                                                            <img src="images/new-year-travel.jpg" alt=""
-                                                                class="img-responsive">
-                                                            <div class="magnifier">
-                                                                <a href="#" title=""><i class="flaticon-add"></i></a>
-                                                            </div>
-                                                        </div><!-- end image-wrap -->
-                                                        <h5><a href="#">Let's Travel together!</a></h5>
-                                                        <small>Better that your imagination.</small>
-                                                        <a href="#" class="menu-button">Learn More</a>
-                                                    </div><!-- end widget -->
+                                                        </ul>
+                                                    </div>
+                                                    <div class="col-md-6 col-sm-6">
+                                                        <div class="menu-widget text-center">
+                                                            <div class="image-wrap">
+                                                                <img src="images/new-year-travel.jpg" alt=""
+                                                                    class="img-responsive">
+                                                                <div class="magnifier">
+                                                                    <a href="#" title=""><i
+                                                                            class="flaticon-add"></i></a>
+                                                                </div>
+                                                            </div><!-- end image-wrap -->
+                                                            <h5><a href="#">Let's Travel together!</a></h5>
+                                                            <small>Better that your imagination.</small>
+                                                            <a href="#" class="menu-button">Learn More</a>
+                                                        </div><!-- end widget -->
+                                                    </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li><a href="events.html">Events</a></li>
-                            <li><a href="page-contact.html">Contact</a></li>
-                            <li class="iconitem"><a href="#" data-toggle="modal" data-target="#login-modal"><i
-                                        class="fa fa-search"></i></a></li>
-                        </ul>
-                    </div>
-                </nav><!-- end navbar -->
-            </div><!-- end container -->
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li><a href="events.html">Events</a></li>
+                                <li><a href="contact.html">Contact</a></li>
+                                <li class="iconitem"><a href="#" data-toggle="modal" data-target="#login-modal"><i
+                                            class="fa fa-search"></i></a></li>
+                            </ul>
+                        </div>
+                    </nav><!-- end navbar -->
+                </div><!-- end container -->
         </header>
 
-                
+
         <section class="section mt">
-            <div class="container" id="mainContainer">
+            <div class="container">
                 <div class="section-title text-center">
                     <h3>Find Your Traveling Friends</h3>
-                    <p>Search the place that you are going to, see whoelse will be there. Let's make travel more fun!</p>
+                    <p>Search the place that you are going to, see whoelse will be there. Let's make travel more fun!
+                    </p>
                 </div><!-- end title -->
-                <span class="badge badge-pill badge-secondary center-block" id="eventD" style="font-size:30px">Los Angeles</span>
-               
+                <span class="badge badge-pill badge-secondary center-block" id="eventD"
+                    style="font-size:30px">CITY</span>
+                <div id="mainContainer">
 
-                
-                
+                </div>
+
+
+
             </div><!-- end container -->
         </section>
 
-        <!-- search city -->
-       
-            <!-- <div>
-                <label for="searchCity">City</label>
-                <input type="text" class="form-control" id="searchCity">
-                <button id="go" class="btn btn-primary center-block" >Go</button>
-            </div> -->
-            <div class="container center-block">
-            <form class="form-inline" role="search">
-                    <div class="form-1">
-                        <input type="text" class="form-control" id="searchCity" placeholder="Enter city here..">
-                        <button type="submit" class="btn btn-primary" id="go"><i
+        <div class="container center-block">
+            <form class="form-inline" style="margin-top:30px" role="search">
+                <div class="form-1">
+                    <input type="text" class="form-control" id="searchCity" placeholder="Enter city here..">
+                    <button type="submit" class="btn btn-primary" id="go" style="margin-top:20px"> <i
                             class="fa fa-search"></i></button>
-                    </div>
-                </form>
-           
-        
-        
-            <form id="leaveMessage">
-                <div class="form-group">
-                    <label for="exampleFormControlInput1">Name</label>
-                    <input type="text" class="form-control" id="userName">
                 </div>
-                <div class="form-group">
-                  <label for="exampleFormControlInput1">Email address</label>
-                  <input type="email" class="form-control" id="userEmail">
+            </form>
+
+            <div class="row">
+                <div class="col-md-4">
+                    <form id="leaveMessage">
+                        <div class="form-group">
+                            <label for="exampleFormControlInput1">Name</label>
+                            <input type="text" class="form-control" id="userName">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleFormControlInput1">Email address</label>
+                            <input type="email" class="form-control" id="userEmail">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleFormControlSelect1">Gender</label>
+                            <select class="form-control" id="userGender">
+                                <option>Male</option>
+                                <option>Female</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleFormControlTextarea1">Message</label>
+                            <textarea class="form-control" id="userMessage" rows="3"></textarea>
+                        </div>
+                        <button type="submit" id="submitForm" class="btn btn-primary">Submit</button>
+                    </form>
                 </div>
-                <div class="form-group">
-                  <label for="exampleFormControlSelect1">Gender</label>
-                  <select class="form-control" id="userGender">
-                    <option>Male</option>
-                    <option>Female</option>
-                  </select>
+                <div class="col-md-8">
+                    <div id="map"></div>
                 </div>
-                <div class="form-group">
-                  <label for="exampleFormControlTextarea1">Message</label>
-                  <textarea class="form-control" id="userMessage" rows="3"></textarea>
-                </div>
-                <button type="submit" id="submitForm">Submit</button>
-              </form>
- </div>
+            </div>
+
+        </div>
 
         <div class="copyrights">
             <div class="container">
@@ -184,17 +191,20 @@
         <!-- jQuery Files -->
         <script src="js/jquery.min.js"></script>
         <script src="js/bootstrap.min.js"></script>
-       
+
         <script src="js/custom.js"></script>
         <!-- VIDEO BG PLUGINS -->
-        
+
 
         <!-- Our JS-->
         <script src="https://code.jquery.com/jquery-3.4.1.js"
-        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
-        crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+            integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+        </script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+        </script>
         <script src="assets/javascript/app.js"></script>
         <script src="assets/javascript/event.js"></script>
 
