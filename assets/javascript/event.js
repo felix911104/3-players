@@ -18,10 +18,33 @@ var userEmail;
 var userGender;
 var userMessage;
 var city;
+var cityLatLng;
+var map;
+var api_key = "AIzaSyAZbDrdQKOwou4F3mQjjFyD3umrHKV59vE";
+
+function displayMap() {
+    var queryURL = "https://maps.googleapis.com/maps/api/geocode/json?address=" + city + "&key=" + api_key;
+    $.ajax({
+        url: queryURL,
+        method: "GET"
+    }).then(function(response){ 
+
+        cityLatLng = response.results[0].geometry.location;
+        initMap();
+    });
+}
+function initMap() {
+    map = new google.maps.Map(document.getElementById('map'), {
+        center: cityLatLng,
+        zoom: 11
+    });
+}
+
 $("#go").on("click", function(event) {
     event.preventDefault();
     $("#leaveMessage").css("visibility", "visible");
     city = $("#searchCity").val().toUpperCase();
+    displayMap();
     $("#eventD").text(city);
     curRef = database.ref("/user/" + city);
     curRef.once("value").then(function(snapshot) {
@@ -31,6 +54,7 @@ $("#go").on("click", function(event) {
         displayMessage();
     });
 });
+
 $("#submitForm").on("click", function(event) {
     event.preventDefault();
     $("#notice").remove();
@@ -47,6 +71,8 @@ $("#submitForm").on("click", function(event) {
     });
     $("#leaveMessage").css("visibility", "hidden");
 });
+
+
 function displayMessage() {
     var numOfMessage;
     var curr = 0;
@@ -69,5 +95,5 @@ function displayMessage() {
             messageBox.append(messageInnerBox);
             messageBox.appendTo(newRow);
         });
-    })
+    });
 }
