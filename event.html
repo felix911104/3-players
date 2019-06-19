@@ -30,6 +30,8 @@
     <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
     <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-database.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAZbDrdQKOwou4F3mQjjFyD3umrHKV59vE"
+    async defer></script>
 
 </head>
 
@@ -135,7 +137,7 @@
                 <button id="go" class="btn btn-primary center-block" >Go</button>
             </div> -->
             <div class="container center-block">
-            <form class="form-inline" role="search">
+                <form class="form-inline" role="search">
                     <div class="form-1">
                         <input type="text" class="form-control" id="searchCity" placeholder="Enter city here..">
                         <button type="submit" class="btn btn-primary" id="go"><i
@@ -143,31 +145,37 @@
                     </div>
                 </form>
            
-        
-        
-            <form id="leaveMessage">
-                <div class="form-group">
-                    <label for="exampleFormControlInput1">Name</label>
-                    <input type="text" class="form-control" id="userName">
+                <div class="row">
+                    <div class="col-md-4">
+                        <form id="leaveMessage">
+                            <div class="form-group">
+                                <label for="exampleFormControlInput1">Name</label>
+                                <input type="text" class="form-control" id="userName">
+                            </div>
+                            <div class="form-group">
+                            <label for="exampleFormControlInput1">Email address</label>
+                            <input type="email" class="form-control" id="userEmail">
+                            </div>
+                            <div class="form-group">
+                            <label for="exampleFormControlSelect1">Gender</label>
+                            <select class="form-control" id="userGender">
+                                <option>Male</option>
+                                <option>Female</option>
+                            </select>
+                            </div>
+                            <div class="form-group">
+                            <label for="exampleFormControlTextarea1">Message</label>
+                            <textarea class="form-control" id="userMessage" rows="3"></textarea>
+                            </div>
+                            <button type="submit" id="submitForm">Submit</button>
+                        </form>
+                    </div>
+                    <div class="col-md-8">
+                        <div id="map"></div>
+                    </div>
                 </div>
-                <div class="form-group">
-                  <label for="exampleFormControlInput1">Email address</label>
-                  <input type="email" class="form-control" id="userEmail">
-                </div>
-                <div class="form-group">
-                  <label for="exampleFormControlSelect1">Gender</label>
-                  <select class="form-control" id="userGender">
-                    <option>Male</option>
-                    <option>Female</option>
-                  </select>
-                </div>
-                <div class="form-group">
-                  <label for="exampleFormControlTextarea1">Message</label>
-                  <textarea class="form-control" id="userMessage" rows="3"></textarea>
-                </div>
-                <button type="submit" id="submitForm">Submit</button>
-              </form>
- </div>
+                
+            </div>
 
         <div class="copyrights">
             <div class="container">
