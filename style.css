@@ -154,7 +154,7 @@ a {
     padding-left: 0
 }
 
-.check li a {}
+
 
 .authorbox,
 blockquote {
@@ -440,7 +440,7 @@ MEGA MENU
     position: relative;
 }
 
-.yamm .dropdown.yamm-fw .dropdown-menu {}
+
 
 .yamm .dropdown {
     position: relative;
@@ -947,7 +947,7 @@ SECTIONS
     overflow: hidden;
     position: relative;
     background-position: top center;
-    vertical-align: sub;
+    /* vertical-align: sub; */
     width: 100%;
     z-index: 2;
 }
@@ -2050,7 +2050,7 @@ MICS
 .loader {
     display: block;
     margin: 20px auto 0;
-    vertical-align: middle;
+    /* vertical-align: middle; */
 }
 
 #preloader {

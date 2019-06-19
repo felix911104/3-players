@@ -9,7 +9,7 @@
         origin=$("#departure").val();
         destination=$("#destination").val();
         departdate = $("#example-date-input").val();
-        cabin=$("#cabin").val();
+        cabin=$("#cabin").val().toLowerCase()[0];
         // adults=$("#adults").val(); 
         search();
     })
