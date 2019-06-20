@@ -44,6 +44,7 @@ $("#go").on("click", function(event) {
     event.preventDefault();
     $("#mainContainer").empty();
     $("#leaveMessage").css("visibility", "visible");
+    $("#searchBar").css("visibility", "hidden");
     city = $("#searchCity").val().toUpperCase();
     displayMap();
     $("#eventD").text(city);
