@@ -86,7 +86,7 @@ function displayMessage() {
                 newRow = $("<div>").attr("class", "row");
                 newRow.appendTo($("#mainContainer"));
             }
-            var messageBox = $("<div>").attr("class", "col-md-4");
+            var messageBox = $("<div>").addClass("col-md-4 messageBox");
             var messageInnerBox =$("<div>").addClass("box testimonial");
             var name = $("<p>").addClass("testiname").html(`<strong>${snapshot.val().name}</strong>`);
             var email = $("<p>").text(snapshot.val().email);
